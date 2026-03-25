@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asbestosremoval-leeds.co.uk/sitemap.xml
