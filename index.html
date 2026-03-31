@@ -162,10 +162,10 @@
             background-color: transparent;
             padding: 20px 0;
             position: absolute;
-            top: 40px;
+            top: var(--topbar-height, 40px);
             width: 100%;
             z-index: 1000;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
         }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
         nav.scrolled {
@@ -220,6 +220,8 @@
             padding: 200px 0 140px;
             position: relative;
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            /* Prevent clip-path from causing overflow/white gaps */
+            overflow: hidden;
         }
         .hero .container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
         .hero-subtitle { font-size: 18px; opacity: 0.9; margin-bottom: 36px; max-width: 560px; }
@@ -461,11 +463,12 @@
             .nav-links.active { display: flex; }
             .mobile-toggle { display: block; }
             .hero .container { grid-template-columns: 1fr; gap: 40px; }
+            /* Remove clip-path on tablet/mobile — it causes the white half-screen gap */
             .hero { clip-path: none; padding: 160px 0 80px; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .surveys-grid { grid-template-columns: 1fr; }
-            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .process-steps { grid-template-columns: repeat(2, 1fr) !important; }
             .process-steps::before { display: none; }
             .why-grid { grid-template-columns: repeat(2, 1fr); }
             .testimonials-grid { grid-template-columns: 1fr; }
@@ -480,9 +483,13 @@
             .why-grid { grid-template-columns: 1fr; }
             .areas-grid { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .process-steps { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr !important; }
             .hero-btns { flex-direction: column; }
-            .top-bar .container { flex-direction: column; text-align: center; }
+            .hero-btns .btn { width: 100%; text-align: center; }
+            /* Stack top bar text on small screens — increases its height */
+            .top-bar .container { flex-direction: column; text-align: center; gap: 4px; }
+            /* Push hero down to clear the taller stacked top bar + nav */
+            .hero { padding-top: 190px; }
         }
     </style>
 </head>
@@ -890,8 +897,18 @@
     </footer>
 
     <script>
-        // Sticky Navigation
+        // Dynamically set nav top = actual height of top bar (works at any screen size)
+        const topBar = document.querySelector('.top-bar');
         const navbar = document.getElementById('navbar');
+
+        function setNavTop() {
+            const h = topBar.getBoundingClientRect().height;
+            navbar.style.top = h + 'px';
+        }
+        setNavTop();
+        window.addEventListener('resize', setNavTop);
+
+        // Sticky Navigation
         window.onscroll = function() {
             if (window.pageYOffset > 50) {
                 navbar.classList.add('scrolled');
