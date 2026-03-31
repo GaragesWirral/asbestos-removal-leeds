@@ -152,9 +152,14 @@
             padding: 8px 0;
             font-size: 14px;
             font-weight: 600;
-            position: relative;
-            z-index: 1001;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1002;
+            transition: transform 0.3s ease;
         }
+        .top-bar.hidden { transform: translateY(-100%); }
         .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
 
         /* ── Navigation ── */
@@ -901,19 +906,26 @@
         const topBar = document.querySelector('.top-bar');
         const navbar = document.getElementById('navbar');
 
+        function getTopBarHeight() {
+            return topBar.getBoundingClientRect().height;
+        }
+
         function setNavTop() {
-            const h = topBar.getBoundingClientRect().height;
-            navbar.style.top = h + 'px';
+            navbar.style.top = getTopBarHeight() + 'px';
         }
         setNavTop();
         window.addEventListener('resize', setNavTop);
 
-        // Sticky Navigation
+        // On scroll: hide top bar, fix nav at very top
         window.onscroll = function() {
-            if (window.pageYOffset > 50) {
+            if (window.pageYOffset > 60) {
+                topBar.classList.add('hidden');
                 navbar.classList.add('scrolled');
+                navbar.style.top = '0';
             } else {
+                topBar.classList.remove('hidden');
                 navbar.classList.remove('scrolled');
+                setNavTop();
             }
         };
 
