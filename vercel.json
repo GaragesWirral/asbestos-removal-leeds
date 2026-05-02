@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.asbestosremoval-leeds.co.uk"
+        }
+      ],
+      "destination": "https://asbestosremoval-leeds.co.uk/:path*",
+      "permanent": true
+    }
+  ]
+}
