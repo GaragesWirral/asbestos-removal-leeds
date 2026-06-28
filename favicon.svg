@@ -1,16 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Shield body — orange -->
-  <path d="M50 2 L95 20 L95 52 C95 76 75 92 50 98 C25 92 5 76 5 52 L5 20 Z" fill="#F97316"/>
-  <!-- Inner shield — darker orange for depth -->
-  <path d="M50 10 L87 26 L87 53 C87 74 69 88 50 93 C31 88 13 74 13 53 L13 26 Z" fill="#ea580c"/>
-  <!-- Y letterform — bold white -->
-  <text
-    x="50"
-    y="72"
-    font-family="Arial Narrow, Arial Black, Arial, sans-serif"
-    font-size="58"
-    font-weight="900"
-    fill="#FFFFFF"
-    text-anchor="middle"
-    letter-spacing="-2">Y</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#0A0E1A"/>
+  <!-- Orange shield shape -->
+  <path d="M16 4 L26 8 L26 18 C26 23.5 21 27.5 16 29 C11 27.5 6 23.5 6 18 L6 8 Z" fill="#F97316"/>
+  <!-- White "A" letter -->
+  <text x="16" y="22" font-family="Arial Black,Arial,sans-serif" font-size="13" font-weight="900" text-anchor="middle" fill="white" letter-spacing="-0.5">A</text>
 </svg>
