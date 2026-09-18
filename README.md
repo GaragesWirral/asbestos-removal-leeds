@@ -73,3 +73,19 @@ Leeds, Bradford, Wakefield, Huddersfield, Halifax, Pudsey, Morley, Horsforth, He
 Bramley, Leeds  
 Phone: [0113 519 9653](tel:01135199653)  
 Website: [asbestosremoval-leeds.co.uk](https://asbestosremoval-leeds.co.uk/)
+
+# Change Notes
+
+- Retired `/asbestos-removal-companies-leeds-west-yorkshire.html` and
+  `/asbestos-removal-contractors-leeds-west-yorkshire.html` via 301 redirects to `/`
+  (keeping the source files in the repo for archival).
+- Homepage H1 updated and short contractor-selection / quote-preparation guidance added.
+- Shared `assets/navigation.js` (defer, capture-phase) and `assets/site-fixes.css`
+  now own mobile menu behaviour across all pages.
+- Formspree forms have visible associated labels and appropriate autocomplete attributes.
+- `vercel.json` now uses 301 redirects and a dependency-free static build.
+- `package.json` replaced with a minimal static site build (`node scripts/build.mjs`).
+- `robots.txt` and `sitemap.xml` tightened; retired pages excluded from the sitemap.
+- Focused practical content improvements on the Leeds garage and surveys pages.
+
+Business facts (licensing claims, address, phone, price ranges, reviews) were left unchanged.

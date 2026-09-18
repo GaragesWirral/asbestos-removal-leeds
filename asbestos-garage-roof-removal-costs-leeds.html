@@ -345,6 +345,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="assets/site-fixes.css">
 </head>
 <body>
 
@@ -358,7 +359,7 @@
     <nav id="navbar">
         <div class="container">
             <a href="https://asbestosremoval-leeds.co.uk/" class="logo">YORKSHIRE<span>ASBESTOS</span> SOLUTIONS</a>
-            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+            <button type="button" class="mobile-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="https://asbestosremoval-leeds.co.uk/">Home</a></li>
                 <li class="dropdown">
@@ -443,22 +444,7 @@
         </div>
     </footer>
 
-    <script>
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navLinks = document.getElementById('nav-links');
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Dropdown toggle for mobile
-        document.querySelectorAll('.dropdown > a').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                if (window.innerWidth <= 992) {
-                    e.preventDefault();
-                    anchor.parentElement.classList.toggle('active');
-                }
-            });
-        });
-    </script>
+    <script>    </script>
+    <script src="assets/navigation.js" defer></script>
 </body>
 </html>

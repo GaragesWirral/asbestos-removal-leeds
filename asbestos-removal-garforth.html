@@ -324,6 +324,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="assets/site-fixes.css">
 </head>
 <body>
 
@@ -339,7 +340,7 @@
     <nav id="navbar">
         <div class="container">
             <a href="/" class="logo">YORKSHIRE<span>ASBESTOS</span> SOLUTIONS</a>
-            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+            <button type="button" class="mobile-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="https://asbestosremoval-leeds.co.uk/">Home</a></li>
                 <li class="dropdown">
@@ -388,10 +389,10 @@
                 <p class="form-sub">Tell us what you need — we'll call back within 2 hours</p>
                 <form class="quote-form" id="quoteForm" action="https://formspree.io/f/xgolnbdl" method="POST">
                     <input type="hidden" name="location" value="Garforth">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <select name="service_type" required>
+                    <label for="field-name" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Your Name</label><input autocomplete="name" id="field-name" type="text" name="name" placeholder="Your Name" required>
+                    <label for="field-phone" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Phone Number</label><input autocomplete="tel" id="field-phone" type="tel" name="phone" placeholder="Phone Number" required>
+                    <label for="field-email" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Email Address</label><input autocomplete="email" id="field-email" type="email" name="email" placeholder="Email Address" required>
+                    <label for="field-service_type" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Type of Service Required</label><select id="field-service_type" name="service_type" required>
                         <option value="">What do you need?</option>
                         <option value="survey">Asbestos Survey / Testing</option>
                         <option value="residential">Residential Removal</option>
@@ -545,32 +546,32 @@
                 <p style="color:rgba(255,255,255,.72); max-width:660px; margin:0 auto;">Every service is carried out by our fully licensed, certificated team — with fixed pricing, full documentation, and no hidden charges.</p>
             </div>
             <div class="services-row">
-                <a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-near-me-leeds.html" class="svc">
+                <a href="residential-asbestos-removal-garforth.html" class="svc">
                     <div class="svc-icon">🏠</div>
                     <h3>Domestic Asbestos Removal</h3>
                     <p>Safe, licensed removal from Garforth homes — artex, floor tiles, AIB, pipe lagging, and more. Minimal disruption; clearance certificate issued.</p>
                 </a>
-                <a href="https://asbestosremoval-leeds.co.uk/asbestos-garage-roof-removal-costs-leeds.html" class="svc">
+                <a href="asbestos-garage-removal-garforth.html" class="svc">
                     <div class="svc-icon">🚗</div>
                     <h3>Garage Roof Removal Garforth</h3>
                     <p>The most common job we carry out in East Leeds. We dismantle and dispose of <strong>asbestos cement garage roofs</strong> at a clear fixed price.</p>
                 </a>
-                <a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-contractors-leeds.html" class="svc">
+                <a href="asbestos-surveys-testing-garforth.html" class="svc">
                     <div class="svc-icon">📋</div>
                     <h3>Pre-Renovation Asbestos Surveys</h3>
                     <p>Planning a loft conversion, extension, or kitchen refit? A <strong>refurbishment survey</strong> is required by law. We can usually visit within 48 hours.</p>
                 </a>
-                <a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-contractors-leeds.html" class="svc">
+                <a href="commercial-asbestos-removal-garforth.html" class="svc">
                     <div class="svc-icon">🏢</div>
                     <h3>Commercial Removal &amp; Surveys</h3>
                     <p>Licensed removal and duty-to-manage surveys for East Leeds businesses, landlords, and commercial property owners. Full compliance documentation provided.</p>
                 </a>
-                <a href="https://asbestosremoval-leeds.co.uk/how-much-is-asbestos-removal-leeds.html" class="svc">
+                <a href="asbestos-encapsulation-garforth.html" class="svc">
                     <div class="svc-icon">🛡️</div>
                     <h3>Asbestos Encapsulation</h3>
                     <p>When removal isn't immediately necessary, professional <strong>encapsulation</strong> seals ACMs safely in place — a compliant, cost-effective alternative.</p>
                 </a>
-                <a href="#contact" class="svc">
+                <a href="emergency-asbestos-removal-garforth.html" class="svc">
                     <div class="svc-icon">🚨</div>
                     <h3>Emergency Response</h3>
                     <p>Accidentally drilled into artex? Disturbed a tile? Stop work. Call <strong>0113 519 9653</strong> — we offer same-day emergency attendance across East Leeds.</p>
@@ -847,8 +848,8 @@
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-pudsey.html">Asbestos Removal Pudsey</a></li>
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-otley.html">Asbestos Removal Otley</a></li>
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-wetherby.html">Asbestos Removal Wetherby</a></li>
-                        <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-companies-leeds-west-yorkshire.html">Asbestos Companies Leeds</a></li>
-                        <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-contractors-leeds-west-yorkshire.html">Contractors Leeds</a></li>
+                        <li><a href="/">Asbestos Companies Leeds</a></li>
+                        <li><a href="/">Contractors Leeds</a></li>
                     </ul>
                 </div>
             </div>
@@ -876,17 +877,6 @@
                 setNavTop();
             }
         };
-
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navLinks = document.getElementById('nav-links');
-        mobileToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-        document.querySelectorAll('.dropdown > a').forEach(a => {
-            a.addEventListener('click', e => {
-                if (window.innerWidth <= 992) { e.preventDefault(); a.parentElement.classList.toggle('active'); }
-            });
-        });
-        document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('active')));
-
         const observer = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.08 });
@@ -904,7 +894,7 @@
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', function(e) {
                 e.preventDefault();
-                const t = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href'); if (!href || href === '#') return; const t = document.querySelector(href);
                 if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' });
             });
         });
@@ -931,5 +921,6 @@
             }
         });
     </script>
+    <script src="assets/navigation.js" defer></script>
 </body>
 </html>

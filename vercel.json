@@ -1,4 +1,7 @@
 {
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "redirects": [
     {
       "source": "/:path*",
@@ -10,6 +13,26 @@
       ],
       "destination": "https://asbestosremoval-leeds.co.uk/:path*",
       "permanent": true
+    },
+    {
+      "source": "/asbestos-removal-companies-leeds-west-yorkshire.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/asbestos-removal-companies-leeds-west-yorkshire",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/asbestos-removal-contractors-leeds-west-yorkshire.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/asbestos-removal-contractors-leeds-west-yorkshire",
+      "destination": "/",
+      "statusCode": 301
     }
   ]
 }

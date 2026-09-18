@@ -107,6 +107,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="assets/site-fixes.css">
 </head>
 <body>
     <div class="top-bar">
@@ -118,7 +119,7 @@
     <nav id="navbar">
         <div class="container">
             <a href="https://asbestosremoval-leeds.co.uk/" class="logo">YORKSHIRE<span>ASBESTOS</span> SOLUTIONS</a>
-            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+            <button type="button" class="mobile-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="https://asbestosremoval-leeds.co.uk/">Home</a></li>
                 <li class="dropdown">
@@ -162,6 +163,9 @@
             <h2>Types of Asbestos Survey</h2>
             <p>There are two main types of asbestos survey relevant to most clients. A management survey is the standard survey for ongoing occupation, it identifies ACMs that could be disturbed during normal use and recommends how to manage them safely. This is required for all non-domestic premises under the duty to manage asbestos.</p>
             <p>A refurbishment or demolition survey is more intrusive and is required before any structural work, renovation, or demolition. This survey accesses all areas including ceiling voids, floor voids, and behind fixed panels to ensure no asbestos is missed before work begins. Getting the right survey type is critical, using the wrong one can leave you exposed to legal and health risks.</p>
+
+            <h2>What to Send Us Before a Survey</h2>
+            <p>So we can scope the survey accurately, it helps if you can provide: the building address, the work you are planning and the areas affected, any existing reports you already hold, and any access limitations we should know about (sealed voids, no loft access, occupied rooms, etc.). When you receive a written quote, ask that it specifies the survey type and scope, and whether laboratory testing and the report itself are included.</p>
 
             <h2>Bulk Sampling and Laboratory Testing</h2>
             <p>When our surveyor identifies a suspected asbestos-containing material, a small bulk sample is taken and sent to a UKAS-accredited laboratory for analysis. Results typically return within 24 to 48 hours, allowing you to make informed decisions quickly.</p>
@@ -230,9 +234,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.getElementById('mobile-toggle').addEventListener('click', () => document.getElementById('nav-links').classList.toggle('active'));
-        document.querySelectorAll('.dropdown > a').forEach(a => a.addEventListener('click', e => { if (window.innerWidth <= 992) { e.preventDefault(); a.parentElement.classList.toggle('active'); } }));
-    </script>
+    <script>    </script>
+    <script src="assets/navigation.js" defer></script>
 </body>
 </html>

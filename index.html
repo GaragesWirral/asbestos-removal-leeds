@@ -497,6 +497,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="assets/site-fixes.css">
 </head>
 <body>
 
@@ -512,7 +513,7 @@
     <nav id="navbar">
         <div class="container">
             <a href="/" class="logo">YORKSHIRE<span>ASBESTOS</span> SOLUTIONS</a>
-            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+            <button type="button" class="mobile-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li class="dropdown">
@@ -539,7 +540,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="section-label">HSE Licensed Contractors</div>
-                <h1>Professional Asbestos Removal Services in Leeds &amp; West Yorkshire</h1>
+                <h1>Asbestos Removal in Leeds &amp; West Yorkshire</h1>
                 <p class="hero-subtitle">Fully licensed and HSE-compliant asbestos removal specialists. We provide safe, efficient, and affordable solutions for domestic and commercial properties across West Yorkshire.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn btn-orange">Get a Free Quote</a>
@@ -557,10 +558,10 @@
                 <h3>Get Your Free Quote</h3>
                 <p class="form-sub">We'll call you back within 2 hours</p>
                 <form class="quote-form" id="quoteForm" action="https://formspree.io/f/xgolnbdl" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <select name="property_type" required>
+                    <label for="field-name" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Your Name</label><input autocomplete="name" id="field-name" type="text" name="name" placeholder="Your Name" required>
+                    <label for="field-phone" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Phone Number</label><input autocomplete="tel" id="field-phone" type="tel" name="phone" placeholder="Phone Number" required>
+                    <label for="field-email" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Email Address</label><input autocomplete="email" id="field-email" type="email" name="email" placeholder="Email Address" required>
+                    <label for="field-property_type" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Property Type</label><select id="field-property_type" name="property_type" required>
                         <option value="">Property Type</option>
                         <option value="residential">Residential</option>
                         <option value="commercial">Commercial</option>
@@ -818,6 +819,28 @@
                     <div class="testimonial-author" style="color: var(--accent);">James R.</div>
                     <div class="testimonial-location" style="color: rgba(255,255,255,0.5);">Wakefield</div>
                 </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"We needed licensed <strong>asbestos removal contractors in Leeds</strong> for our commercial unit before a full refurbishment. Yorkshire Asbestos were professional, fast, and provided all the documentation we needed. Highly recommended."</p>
+                    <div class="testimonial-author">David H.</div>
+                    <div class="testimonial-location">Commercial Property Owner, Leeds</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Brilliant service. They carried out a full <strong>demolition survey</strong> before we knocked down an extension on our Bradford home. The report was thorough, the team were polite, and the price was fair. Will use again."</p>
+                    <div class="testimonial-author">Karen M.</div>
+                    <div class="testimonial-location">Homeowner, Bradford</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Called them after we accidentally disturbed what we thought might be <strong>asbestos insulation board</strong> in our Wakefield property. They responded same day, made the area safe, and removed everything correctly. Absolute peace of mind."</p>
+                    <div class="testimonial-author">Tom &amp; Julie R.</div>
+                    <div class="testimonial-location">Homeowners, Wakefield</div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -843,6 +866,21 @@
                     <p>Founded with a commitment to public safety, Yorkshire Asbestos Solutions has become a trusted name in the <strong>asbestos industry</strong> across <strong>Leeds</strong> and <strong>West Yorkshire</strong>. With over 15 years of experience, I started this company to provide a more personal, transparent, and <strong>safe asbestos removal</strong> service for my local community.</p>
                     <p>We strictly adhere to the <strong>Control of Asbestos Regulations</strong> and work closely with the <strong>Health and Safety Executive</strong> to maintain the highest possible standards. Whether it's a small <strong>asbestos garage</strong> in <strong>Halifax</strong> or a large <strong>commercial premises</strong> in <strong>Huddersfield</strong>, we treat every job with the same level of care and expertise.</p>
                 </div>
+            </div>
+
+            <div class="summary-box" style="margin-top:32px;">
+                <h3>Choosing a Contractor &amp; Preparing Your Quote</h3>
+                <p>Use the checklist below when you request a quote so you receive accurate, comparable information:</p>
+                <ul>
+                    <li><strong>Property address &amp; age</strong> — this helps us anticipate likely asbestos-containing materials.</li>
+                    <li><strong>Material type</strong> if known — artex, cement sheet, insulation board, floor tile, etc.</li>
+                    <li><strong>Access for the removal team</strong> — parking, scaffolding, working at height.</li>
+                    <li><strong>Scope of work</strong> — is it a refurbishment, full removal, or encapsulation?</li>
+                    <li><strong>Any prior survey report</strong> — existing photos taken from a safe position; do not disturb materials.</li>
+                    <li><strong>Requested start date</strong> — let us know when you would like the work to begin.</li>
+                </ul>
+                <p>Yorkshire Asbestos Solutions carries out asbestos removal work directly. Tell us about your property and the work you are planning so we can discuss the appropriate next steps.</p>
+                <p>Asking how a quote is put together helps you compare like for like. Ask whether the written quote specifies the removal scope, how access will be arranged, how waste will be handled and what relevant documentation will be provided. These are useful questions to raise with any contractor before you commit, and we are happy to talk through our approach. You may also find our <a href="residential-asbestos-removal-leeds.html">residential asbestos removal</a>, <a href="commercial-asbestos-removal-leeds.html">commercial asbestos removal</a> and <a href="asbestos-surveys-testing-leeds.html">asbestos surveys</a> pages useful for context.</p>
             </div>
 
             <div class="summary-box">
@@ -906,8 +944,6 @@
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-pudsey.html">Asbestos Removal Pudsey</a></li>
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-otley.html">Asbestos Removal Otley</a></li>
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-wetherby.html">Asbestos Removal Wetherby</a></li>
-                        <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-companies-leeds-west-yorkshire.html">Asbestos Companies Leeds</a></li>
-                        <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-contractors-leeds-west-yorkshire.html">Contractors Leeds</a></li>
                     </ul>
                 </div>
             </div>
@@ -944,31 +980,6 @@
                 setNavTop();
             }
         };
-
-        // Mobile Menu Toggle
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navLinks = document.getElementById('nav-links');
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Dropdown toggle for mobile
-        document.querySelectorAll('.dropdown > a').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                if (window.innerWidth <= 992) {
-                    e.preventDefault();
-                    anchor.parentElement.classList.toggle('active');
-                }
-            });
-        });
-
-        // Close mobile menu on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
         // Intersection Observer for Fade-in Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1021,7 +1032,7 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href'); if (!href || href === '#') return; const target = document.querySelector(href);
                 if (target) {
                     const offset = 100;
                     const bodyRect = document.body.getBoundingClientRect().top;
@@ -1033,5 +1044,6 @@
             });
         });
     </script>
+    <script src="assets/navigation.js" defer></script>
 </body>
 </html>

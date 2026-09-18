@@ -1,0 +1,74 @@
+/* ---- Shared site fixes ---- */
+.mobile-toggle {
+    background: transparent;
+    border: 0;
+    padding: 8px;
+    line-height: 1;
+    font-family: inherit;
+}
+.mobile-toggle:focus-visible {
+    outline: 2px solid #F97316;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+.dropdown > a[aria-expanded="true"] { color: #F97316; }
+
+/* Keep the transferred testimonial cards consistent with the existing section. */
+.section-dark .testimonial-card { background: rgba(255,255,255,0.05); }
+.section-dark .testimonial-text { color: rgba(255,255,255,0.85); }
+.section-dark .testimonial-author { color: var(--accent); }
+.section-dark .testimonial-location { color: rgba(255,255,255,0.5); }
+
+/* Let Pudsey's grid shrink below the image's intrinsic width. */
+.street-map > * { min-width: 0; }
+.street-map img { max-width: 100%; height: auto; }
+
+/* Mobile navigation: scrollable so all items stay reachable on short screens. */
+@media (max-width: 992px) {
+    .nav-links {
+        max-height: calc(100dvh - 110px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Mobile submenu is hidden by default — shown only when the dropdown is active. */
+    .dropdown > .dropdown-menu,
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown.active > .dropdown-menu {
+        display: flex;
+    }
+
+    .dropdown > .dropdown-menu,
+    .dropdown.active > .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+/* Desktop dropdown: show on hover/focus, min-width 993px. */
+@media (min-width: 993px) {
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 576px) {
+    .why-grid { grid-template-columns: minmax(0, 1fr) !important; }
+    .two-col > * { min-width: 0; }
+    .checklist li { display: block; }
+    .checklist li::before { margin-right: 13px; }
+}
+
+/* Visible focus for keyboard users. */
+a:focus-visible,
+button:focus-visible,
+.mobile-toggle:focus-visible {
+    outline: 2px solid #F97316;
+    outline-offset: 2px;
+}

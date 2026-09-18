@@ -107,6 +107,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="assets/site-fixes.css">
 </head>
 <body>
     <div class="top-bar">
@@ -118,7 +119,7 @@
     <nav id="navbar">
         <div class="container">
             <a href="https://asbestosremoval-leeds.co.uk/" class="logo">YORKSHIRE<span>ASBESTOS</span> SOLUTIONS</a>
-            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+            <button type="button" class="mobile-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="https://asbestosremoval-leeds.co.uk/">Home</a></li>
                 <li class="dropdown">
@@ -158,6 +159,9 @@
             <h2>Asbestos Garage Removal in Leeds</h2>
             <p>Asbestos cement garages are one of the most common asbestos-containing structures found in Leeds gardens. Millions were installed across the UK between the 1930s and 1980s, and the corrugated asbestos cement sheets used for roofs and wall panels remain in properties throughout Bramley, Pudsey, Morley, Farsley, and virtually every Leeds suburb.</p>
             <p>When an asbestos garage becomes damaged, leaking, or simply needs replacing, professional removal is essential. Yorkshire Asbestos Solutions provides complete asbestos garage removal, including roof sheets, wall panels, and the full structure, carried out safely by HSE-licensed operatives.</p>
+
+            <h2>Questions for Your Garage Quote</h2>
+            <p>To help us put together a useful quote, it helps if you can tell us a few things up front: the approximate dimensions of the garage, whether you would like just the roof addressed or the whole garage considered, how easy it is to reach from the road, whether you already have a survey, and any existing photos of the structure taken from a safe position without disturbing the materials. Please ask whether the quote separates removal, disposal and any replacement work, so you can see clearly what each element covers.</p>
 
             <h2>Roof-Only vs Full Garage Dismantle</h2>
             <p>Some clients need only the asbestos roof sheets removed, allowing them to re-roof with modern materials while retaining the existing brick or block walls. Others require the entire garage dismantled and removed from site. We provide both services and will advise on the most cost-effective approach during our free site visit.</p>
@@ -230,9 +234,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.getElementById('mobile-toggle').addEventListener('click', () => document.getElementById('nav-links').classList.toggle('active'));
-        document.querySelectorAll('.dropdown > a').forEach(a => a.addEventListener('click', e => { if (window.innerWidth <= 992) { e.preventDefault(); a.parentElement.classList.toggle('active'); } }));
-    </script>
+    <script>    </script>
+    <script src="assets/navigation.js" defer></script>
 </body>
 </html>

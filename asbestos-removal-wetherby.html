@@ -344,6 +344,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="assets/site-fixes.css">
 </head>
 <body>
 
@@ -359,7 +360,7 @@
     <nav id="navbar">
         <div class="container">
             <a href="/" class="logo">YORKSHIRE<span>ASBESTOS</span> SOLUTIONS</a>
-            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+            <button type="button" class="mobile-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="https://asbestosremoval-leeds.co.uk/">Home</a></li>
                 <li class="dropdown">
@@ -408,10 +409,10 @@
                 <p class="sub">We'll call back within 2 hours</p>
                 <form class="qform" id="quoteForm" action="https://formspree.io/f/xgolnbdl" method="POST">
                     <input type="hidden" name="location" value="Wetherby">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <select name="service_type" required>
+                    <label for="field-name" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Your Name</label><input autocomplete="name" id="field-name" type="text" name="name" placeholder="Your Name" required>
+                    <label for="field-phone" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Phone Number</label><input autocomplete="tel" id="field-phone" type="tel" name="phone" placeholder="Phone Number" required>
+                    <label for="field-email" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Email Address</label><input autocomplete="email" id="field-email" type="email" name="email" placeholder="Email Address" required>
+                    <label for="field-service_type" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Type of Service Required</label><select id="field-service_type" name="service_type" required>
                         <option value="">What do you need?</option>
                         <option value="survey">Asbestos Survey / Testing</option>
                         <option value="pre_purchase">Pre-Purchase Survey</option>
@@ -1064,8 +1065,8 @@
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-pudsey.html">Asbestos Removal Pudsey</a></li>
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-otley.html">Asbestos Removal Otley</a></li>
                         <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-wetherby.html">Asbestos Removal Wetherby</a></li>
-                        <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-companies-leeds-west-yorkshire.html">Asbestos Companies Leeds</a></li>
-                        <li><a href="https://asbestosremoval-leeds.co.uk/asbestos-removal-contractors-leeds-west-yorkshire.html">Contractors Leeds</a></li>
+                        <li><a href="/">Asbestos Companies Leeds</a></li>
+                        <li><a href="/">Contractors Leeds</a></li>
                     </ul>
                 </div>
             </div>
@@ -1090,14 +1091,6 @@
             }
         };
 
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navLinks = document.getElementById('nav-links');
-        mobileToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-        document.querySelectorAll('.dropdown > a').forEach(a => {
-            a.addEventListener('click', e => { if (window.innerWidth <= 992) { e.preventDefault(); a.parentElement.classList.toggle('active'); } });
-        });
-        document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('active')));
-
         const observer = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.08 });
@@ -1115,7 +1108,7 @@
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', function(e) {
                 e.preventDefault();
-                const t = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href'); if (!href || href === '#') return; const t = document.querySelector(href);
                 if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' });
             });
         });
@@ -1142,5 +1135,6 @@
             }
         });
     </script>
+    <script src="assets/navigation.js" defer></script>
 </body>
 </html>
