@@ -6,13 +6,13 @@
     <title>Asbestos Removal Companies in Leeds West Yorkshire | Licensed Contractor Guide</title>
     <meta name="description" content="Looking for asbestos removal companies in Leeds, West Yorkshire? Yorkshire Asbestos Solutions are HSE-licensed contractors offering safe, certified asbestos removal across Leeds, Bradford, Wakefield & beyond.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://asbestosremoval-leeds.co.uk/asbestos-removal-companies-leeds-west-yorkshire.html">
+    <link rel="canonical" href="https://asbestosremoval-leeds.co.uk/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Asbestos Removal Companies in Leeds West Yorkshire | Licensed Contractor Guide">
     <meta property="og:description" content="Looking for asbestos removal companies in Leeds, West Yorkshire? Yorkshire Asbestos Solutions are HSE-licensed contractors offering safe, certified asbestos removal across Leeds, Bradford, Wakefield & beyond.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://asbestosremoval-leeds.co.uk/asbestos-removal-companies-leeds-west-yorkshire.html">
+    <meta property="og:url" content="https://asbestosremoval-leeds.co.uk/">
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F97316%22><path d=%22M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z%22/></svg>">
 
@@ -22,13 +22,13 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Asbestos Removal Companies in Leeds West Yorkshire",
-      "url": "https://asbestosremoval-leeds.co.uk/asbestos-removal-companies-leeds-west-yorkshire.html",
+      "url": "https://asbestosremoval-leeds.co.uk/",
       "description": "Guide to finding reliable asbestos removal companies in Leeds and West Yorkshire, featuring Yorkshire Asbestos Solutions - HSE-licensed contractors.",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://asbestosremoval-leeds.co.uk/"},
-          {"@type": "ListItem", "position": 2, "name": "Asbestos Removal Companies Leeds", "item": "https://asbestosremoval-leeds.co.uk/asbestos-removal-companies-leeds-west-yorkshire.html"}
+          {"@type": "ListItem", "position": 2, "name": "Asbestos Removal Companies Leeds", "item": "https://asbestosremoval-leeds.co.uk/"}
         ]
       },
       "mainEntity": {
@@ -333,6 +333,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="stylesheet" href="assets/site-fixes.css">
 </head>
 <body>
 
@@ -348,11 +349,11 @@
     <nav id="navbar">
         <div class="container">
             <a href="/" class="logo">YORKSHIRE<span>ASBESTOS</span> SOLUTIONS</a>
-            <div class="mobile-toggle" id="mobile-toggle">☰</div>
+            <button type="button" class="mobile-toggle" id="mobile-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="https://asbestosremoval-leeds.co.uk/">Home</a></li>
                 <li class="dropdown">
-                    <a href="#services">Services ▾</a>
+                    <a href="/#services">Services ▾</a>
                     <div class="dropdown-menu">
                         <a href="https://asbestosremoval-leeds.co.uk/asbestos-garage-roof-removal-costs-leeds.html">Garage Roof Removal Costs</a>
                         <a href="https://asbestosremoval-leeds.co.uk/how-much-is-asbestos-removal-leeds.html">How Much is Removal?</a>
@@ -825,24 +826,6 @@
         };
 
         // Mobile menu
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navLinks = document.getElementById('nav-links');
-        mobileToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-
-        document.querySelectorAll('.dropdown > a').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                if (window.innerWidth <= 992) {
-                    e.preventDefault();
-                    anchor.parentElement.classList.toggle('active');
-                }
-            });
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('active'));
-        });
-
-        // Fade-in observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -860,5 +843,6 @@
             });
         });
     </script>
+    <script src="assets/navigation.js" defer></script>
 </body>
 </html>
