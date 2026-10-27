@@ -147,6 +147,8 @@
         .quote-form { display: flex; flex-direction: column; gap: 12px; }
         .quote-form input, .quote-form select { width: 100%; padding: 12px 15px; border: 2px solid #E5E7EB; border-radius: 4px; font-family: var(--font-body); font-size: 15px; color: var(--text-main); background: #fff; -webkit-appearance: none; transition: border-color .2s; }
         .quote-form input:focus, .quote-form select:focus { outline: none; border-color: var(--accent); }
+        .quote-form textarea { width: 100%; padding: 12px 15px; border: 2px solid #E5E7EB; border-radius: 4px; font-family: var(--font-body); font-size: 15px; color: var(--text-main); background: #fff; -webkit-appearance: none; transition: border-color .2s; resize: vertical; min-height: 104px; line-height: 1.45; display: block; }
+        .quote-form textarea:focus { outline: none; border-color: var(--accent); }
         .quote-form select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 40px; }
         .quote-form button { width: 100%; background: var(--accent); color: #fff; font-size: 15px; padding: 14px; border-radius: 4px; font-weight: 700; text-transform: uppercase; border: none; cursor: pointer; font-family: var(--font-body); transition: background .2s; }
         .quote-form button:hover { background: var(--accent-dark); }
@@ -380,16 +382,7 @@
                     <label for="field-name" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Your Name</label><input autocomplete="name" id="field-name" type="text" name="name" placeholder="Your Name" required>
                     <label for="field-phone" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Phone Number</label><input autocomplete="tel" id="field-phone" type="tel" name="phone" placeholder="Phone Number" required>
                     <label for="field-email" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Email Address</label><input autocomplete="email" id="field-email" type="email" name="email" placeholder="Email Address" required>
-                    <label for="field-service_type" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">Type of Service Required</label><select id="field-service_type" name="service_type" required>
-                        <option value="">What do you need?</option>
-                        <option value="survey">Asbestos Survey</option>
-                        <option value="loft_conversion">Loft Conversion Survey</option>
-                        <option value="extension">Extension / Renovation Survey</option>
-                        <option value="residential">Residential Removal</option>
-                        <option value="garage">Garage Roof Removal</option>
-                        <option value="commercial">Commercial Premises</option>
-                        <option value="emergency">Emergency — Asbestos Disturbed</option>
-                    </select>
+                    <label for="field-message" style="font-size:14px;font-weight:600;color:#1A1A2E;display:block;margin-bottom:4px;">What do you need?</label><textarea id="field-message" name="message" rows="4" placeholder="e.g. asbestos garage roof removal, survey before renovation, Artex ceiling testing…" required></textarea>
                     <button type="submit">Request Free Quote</button>
                 </form>
                 <p class="form-privacy">🔒 Your details are safe — no spam, ever.</p>
