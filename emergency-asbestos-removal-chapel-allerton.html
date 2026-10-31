@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLYT0BMXQ3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DLYT0BMXQ3');
+      // GA4 lead event: fires once when the quote form's success message is shown (form logic untouched)
+      document.addEventListener('DOMContentLoaded', function () {
+        var fb = document.getElementById('formFeedback');
+        if (!fb || !window.MutationObserver) return;
+        var sent = false;
+        new MutationObserver(function () {
+          if (!sent && fb.style.display === 'block') { sent = true; gtag('event', 'generate_lead', { form_id: 'quoteForm' }); }
+        }).observe(fb, { attributes: true, attributeFilter: ['style'] });
+      });
+    </script>
     <title>Emergency Asbestos Removal Chapel Allerton | Period Property Response</title>
     <meta name="description" content="Emergency asbestos removal in Chapel Allerton LS7. Conservation area and Victorian property incidents handled carefully. HSE-licensed rapid response. Call now.">
     <meta property="og:title" content="Emergency Asbestos Removal Chapel Allerton | Period Property Response">

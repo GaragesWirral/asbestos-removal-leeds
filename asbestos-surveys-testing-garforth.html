@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLYT0BMXQ3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DLYT0BMXQ3');
+      // GA4 lead event: fires once when the quote form's success message is shown (form logic untouched)
+      document.addEventListener('DOMContentLoaded', function () {
+        var fb = document.getElementById('formFeedback');
+        if (!fb || !window.MutationObserver) return;
+        var sent = false;
+        new MutationObserver(function () {
+          if (!sent && fb.style.display === 'block') { sent = true; gtag('event', 'generate_lead', { form_id: 'quoteForm' }); }
+        }).observe(fb, { attributes: true, attributeFilter: ['style'] });
+      });
+    </script>
     <title>Asbestos Surveys and Testing Garforth | Pre-Renovation Asbestos Survey LS25</title>
     <meta name="description" content="Asbestos surveys in Garforth LS25. Pre-renovation and pre-sale surveys for 1970s and 80s homes. Landlord management surveys. UKAS-accredited results in 48 hours.">
     <meta property="og:title" content="Asbestos Surveys and Testing Garforth | Pre-Renovation Asbestos Survey LS25">

@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLYT0BMXQ3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DLYT0BMXQ3');
+      // GA4 lead event: fires once when the quote form's success message is shown (form logic untouched)
+      document.addEventListener('DOMContentLoaded', function () {
+        var fb = document.getElementById('formFeedback');
+        if (!fb || !window.MutationObserver) return;
+        var sent = false;
+        new MutationObserver(function () {
+          if (!sent && fb.style.display === 'block') { sent = true; gtag('event', 'generate_lead', { form_id: 'quoteForm' }); }
+        }).observe(fb, { attributes: true, attributeFilter: ['style'] });
+      });
+    </script>
     <title>Asbestos Garage Removal Harehills | Licensed East Leeds Specialists</title>
     <meta name="description" content="Asbestos garage removal in Harehills LS8. Rear-yard outbuildings and attached structure removal. HSE-licensed, legally disposed. Free quotes from Bramley-based team.">
     <meta property="og:title" content="Asbestos Garage Removal Harehills | Licensed East Leeds Specialists">
