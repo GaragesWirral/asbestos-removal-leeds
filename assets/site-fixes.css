@@ -75,8 +75,8 @@ button:focus-visible,
 
 /* Before and after gallery */
 .ba-gallery { background:#F3F4F6; padding:72px 0; }
-.ba-gallery .ba-head { text-align:center; max-width:640px; margin:0 auto 40px; }
-.ba-gallery .ba-head p { color:var(--muted, #6B7280); margin-bottom:0; }
+.ba-gallery .ba-head { text-align:center; max-width:640px; margin:0 auto 36px; }
+.ba-gallery .ba-head h2 { margin-bottom:0; }
 .ba-gallery .ba-label { display:inline-block; color:var(--accent, #F97316); font-weight:700; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; }
 .ba-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
 .ba-pair { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 18px rgba(10,14,26,0.08); }
@@ -86,7 +86,6 @@ button:focus-visible,
 .ba-tag { position:absolute; left:8px; top:8px; padding:3px 10px; border-radius:999px; font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#fff; line-height:1.5; }
 .ba-tag-before { background:rgba(10,14,26,0.82); }
 .ba-tag-after { background:var(--accent, #F97316); }
-.ba-caption { padding:14px 16px; margin:0; font-weight:600; font-size:15px; color:var(--text-on-light, #1A1A2E); }
 @media (max-width: 900px) {
   .ba-grid { grid-template-columns:1fr; max-width:560px; margin:0 auto; gap:20px; }
   .ba-gallery { padding:56px 0; }
